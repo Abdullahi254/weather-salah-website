@@ -1,0 +1,78 @@
+body {
+    color: #333333;
+    max-width: 650px;
+    margin: 0 auto;
+    font-family: arial;
+    padding-left: 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+} 
+
+header a {
+    color: #888888;
+    text-decoration: none;
+    margin-right: 16px
+
+}
+header{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+footer{
+    margin-top: 20px;
+    border-top: #888888 solid 2px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+h1{
+    font-size: 50px;
+}
+.passport{
+    width: 250px
+}
+.main-content{
+    flex-grow: 1
+}
+
+input{
+    border: 1 solid #cccccc;
+    padding: 8px
+}
+
+button{
+    cursor: pointer;
+    padding: 8px;
+    background: #333333;
+    color: aliceblue;
+
+
+}
+
+#message1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 24px;
+}
+
+#message2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 24px;
+    color: blueviolet
+}
+#message0{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 24px;
+}
+#message3{
+    line-height: 30pt;
+    font-size: 24px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#prayerH{
+    font-size: 30px;
+    border-bottom: #835e5e solid 1px;
+    max-width: 30%;
+}
