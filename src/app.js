@@ -6,6 +6,7 @@ const dailySummary = require('./dailySummary')
 const prayerTime = require('./prayerTime')
 app = express()
 
+const port = process.env.PORT || 3000
 //defines path for express config
 const publicDirectory = path.join(__dirname, '../public/')
 const viewsPath = path.join(__dirname,'../templates/views')
@@ -93,6 +94,6 @@ app.get('*',(req,res)=>{
     res.render('404')
 })
 
-app.listen(3000,()=>{
-    console.log('SERVER STARTED!')
+app.listen(port,()=>{
+    console.log('SERVER STARTED UP ON PORT '+ port)
 })
