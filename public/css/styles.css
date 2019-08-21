@@ -12,7 +12,7 @@ body {
 header a {
     color: #888888;
     text-decoration: none;
-    margin-right: 16px
+    margin-right: 16px 
 
 }
 header{
@@ -21,7 +21,7 @@ header{
 }
 
 footer{
-    margin-top: 20px;
+    margin-top: 20px; 
     border-top: #888888 solid 2px;
     padding-top: 20px;
     margin-bottom: 20px;
