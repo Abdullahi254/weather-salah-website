@@ -22,7 +22,7 @@ weatherForm.addEventListener('submit',(e)=>{
             message1.textContent = data.error
         }else{
             message1.textContent = data.location
-            message2.textContent = "Temperature: "+data.temp+' degrees\n currently: '+data.currently
+            message2.textContent = "Temperature: "+data.temp+' degrees\nIt is currently '+data.currently
             message0.textContent = data.dailySummary
         }
     })

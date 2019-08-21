@@ -48,12 +48,13 @@ app.get('/weather',(req,res)=>{
     }
     geocode(req.query.address,(er,{place,cordinates}={})=>{
         if(er) return res.send({error:er})
-        dailySummary(cordinates[0],cordinates[1],(er,{summary,temp})=>{
+        dailySummary(cordinates[0],cordinates[1],(er,{summary,temp,currently})=>{
             if(er) return res.send({error:er})
             res.send({
                 dailySummary: summary,
                 temp: temp,
-                location:place
+                location:place,
+                currently
             })
         })
        
