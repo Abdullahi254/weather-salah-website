@@ -6,6 +6,7 @@ const message0 = document.querySelector('#message0')
 const message3 = document.querySelector("#message3")
 const heading  = document.querySelector("#prayerH")
 message3.setAttribute('style', 'white-space: pre;')
+message2.setAttribute('style', 'white-space: pre;')
 
 weatherForm.addEventListener('submit',(e)=>{
     e.preventDefault()
@@ -21,7 +22,7 @@ weatherForm.addEventListener('submit',(e)=>{
             message1.textContent = data.error
         }else{
             message1.textContent = data.location
-            message2.textContent = "Temperature: "+data.temp+' degrees'
+            message2.textContent = "Temperature: "+data.temp+' degrees\n currently: '+data.currently
             message0.textContent = data.dailySummary
         }
     })

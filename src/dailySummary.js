@@ -14,14 +14,15 @@ const dailySummary = (long,lat,callbk)=>{
     }else{
         callbk(undefined,
             {summary: body.hourly.summary,
-             temp: body.currently.temperature
+             temp: body.currently.temperature,
+             currently: body.currently.summary
         })
     }
     })
 
 }
 
-// dailySummary(37.8267,-122.4233,(er,data)=>{
+// dailySummary(0.504848, 35.280373, (er,data)=>{
 //     console.log('Daily summary: ',data.summary)
 // })
  
