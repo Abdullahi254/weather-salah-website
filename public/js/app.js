@@ -1,3 +1,37 @@
+fetch('/weather?address=uasin gishu').
+then((res)=>{
+res.json().then((data)=>{
+    console.log(data)
+    if(data.error){
+        message1.textContent = data.error
+    }else{
+        message1.textContent = data.dailySummary
+        message2.textContent = "Temperature: "+data.temp+' degrees\ncurrently: '+data.currently
+        message0.textContent = data.location
+    }
+})
+
+
+})
+
+fetch('/prayertime?address=uasin gishu').
+then((res)=>{
+res.json().then((data)=>{
+console.log(data)
+if(data.error){
+    message1.textContent = data.error
+}else{
+    message3.textContent = ''
+    heading.textContent = 'Prayer Time'
+    for(const i in data){
+        message3.textContent += ` ${i}: ${data[i]}\n`
+    }
+}
+})
+
+
+})
+
 const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')
 const message1 = document.querySelector('#message1')
@@ -21,9 +55,9 @@ weatherForm.addEventListener('submit',(e)=>{
         if(data.error){
             message1.textContent = data.error
         }else{
-            message1.textContent = data.location
-            message2.textContent = "Temperature: "+data.temp+' degrees\nIt is currently '+data.currently
-            message0.textContent = data.dailySummary
+            message1.textContent = data.dailySummary
+            message2.textContent = "Temperature: "+data.temp+' degrees\ncurrently: '+data.currently
+            message0.textContent = data.location
         }
     })
 

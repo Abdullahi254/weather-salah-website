@@ -22,4 +22,9 @@ const prayerTime = (lat,long,callbk)=>{
 //     })
 // })
 
+// prayerTime(0.504848,35.280373,(er,data2)=>{
+//     if(er) return console.log(er)
+//     console.log(data2)
+// })
+
 module.exports = prayerTime
