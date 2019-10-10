@@ -4,6 +4,7 @@ const hbs = require('hbs')
 const geocode = require('./geocode')
 const dailySummary = require('./dailySummary')
 const prayerTime = require('./prayerTime')
+const reverseGeo = require('./reversegeocode')
 app = express()
 
 const port = process.env.PORT || 3000
@@ -61,6 +62,18 @@ app.get('/weather',(req,res)=>{
     })
     
     
+})
+app.get('/location',(req,res)=>{
+    if(!req.query.longitude && req.query.latitude){
+        return res.send({error:'No address included'})
+    }
+    const pos = {
+        longitude: req.query.longitude,
+        latitude: req.query.latitude
+    }
+    reverseGeo(pos,(name)=>{
+        res.send(name)
+    })
 })
 
 app.get('/prayertime',(req,res)=>{

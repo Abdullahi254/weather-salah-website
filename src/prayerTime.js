@@ -1,7 +1,8 @@
 const request= require('request')
 const geocode = require('./geocode')
 const prayerTime = (lat,long,callbk)=>{
-    const url = 'http://api.aladhan.com/v1/calendar?latitude='+lat+'&longitude='+long+'&method=4&month=8&year=2019&timezonestring=Africa/Nairobi';
+    const d = new Date()
+    const url = `http://api.aladhan.com/v1/calendar?latitude=${lat}&longitude=${long}&method=4&month=${d.getMonth()+1}&year=${d.getFullYear()}`;
     request({json:true,url},(er,res)=>{
         if(er) return callbk(er.errno,undefined)
         else if (res.body.code == 403){
